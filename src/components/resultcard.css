@@ -1,0 +1,42 @@
+.result-card{
+    width: 55rem;
+    margin: 20px auto ;
+    display: flex;  
+
+}
+.poster-wrapper
+{
+    position: relative;
+    display: flex;
+}
+.header{
+    margin: 20px;
+}
+.date{
+    color: grey;
+}
+
+.filler{
+    background-color: black;
+}
+.add{
+    margin-top: 6rem;
+    position: relative;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.off{
+    background-color: #531516;
+    margin-top: 6rem;
+    position: relative;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.off:hover{
+    background-color: #531516;
+    cursor: default;
+}

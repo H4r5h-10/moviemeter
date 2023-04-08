@@ -1,0 +1,22 @@
+.input-wrapper{
+    padding: 10px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.input-wrapper input{
+    padding: 20px;
+    background-color: #1b222c;
+    border: 0.5px solid black;
+    border-radius: 40px;
+    width: 50vw;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.results{
+    list-style-type: none;
+}

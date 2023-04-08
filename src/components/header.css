@@ -1,0 +1,47 @@
+header{
+    margin: 0;
+    background-color: #1b222c;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.inner-content{
+    display: flex;
+}
+.brand{
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;  
+    color: #FF3C38;
+}
+.nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    right: -55rem;
+    margin: 0;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    color: red;
+    transition: 0.4s ease-in;
+}
+.logo{
+    display: flex;
+    gap: 0.2rem;
+    color: #FF3C38;
+}
+.icon{
+    font-size: 3rem;
+}

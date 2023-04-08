@@ -1,0 +1,22 @@
+.card:hover{
+    position: absolute;
+    filter: brightness(120%);
+   filter: contrast(120%);
+   filter: drop-shadow(10px 10px 10px black);
+   transition: 0.3s ease;
+   z-index: 1;
+}
+.card img{
+    border-radius: 10px;
+}
+.hide{
+    display: none;
+}
+.image{
+    z-index: 1;
+    position: relative;
+}
+.f{
+    z-index: 10;
+    position: relative;
+}
