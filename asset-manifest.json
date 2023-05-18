@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/moviemeter/static/css/main.aeb504ea.css",
-    "main.js": "/moviemeter/static/js/main.f1a9ae78.js",
+    "main.js": "/moviemeter/static/js/main.0c3b287c.js",
     "static/js/787.ac04ab78.chunk.js": "/moviemeter/static/js/787.ac04ab78.chunk.js",
     "index.html": "/moviemeter/index.html",
     "main.aeb504ea.css.map": "/moviemeter/static/css/main.aeb504ea.css.map",
-    "main.f1a9ae78.js.map": "/moviemeter/static/js/main.f1a9ae78.js.map",
+    "main.0c3b287c.js.map": "/moviemeter/static/js/main.0c3b287c.js.map",
     "787.ac04ab78.chunk.js.map": "/moviemeter/static/js/787.ac04ab78.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aeb504ea.css",
-    "static/js/main.f1a9ae78.js"
+    "static/js/main.0c3b287c.js"
   ]
 }
