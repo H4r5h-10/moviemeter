@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import "./resultcard.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { GlobalContext } from "../context/GlobalState";
 
 export const ResultCard = ({ movie }) => {
@@ -12,6 +14,25 @@ export const ResultCard = ({ movie }) => {
   let alrWatched = watched.find((o) => o.id === movie.id);
   let checkWatched = alrWatched ? true : false;
 
+  async function addToWatchlist(movie) {
+    await addMovieToWatchlist(movie);
+    toast("Added to Watchlist!", {
+      autoClose: 1000,
+      closeOnClick: false,
+      pauseOnHover: false,
+      theme: "dark",
+    });
+    return;
+  }
+  function addToWatched(movie) {
+    addMovieToWatched(movie);
+    toast("Added to Watched!", {
+      autoClose: 1000,
+      closeOnClick: false,
+      pauseOnHover: false,
+      theme: "dark",
+    });
+  }
   return (
     <div className="result-card">
       <div className="poster-wrapper">
@@ -31,14 +52,14 @@ export const ResultCard = ({ movie }) => {
           />
         )}
       </div>
-      <div className="info">
-        <div className="header">
-          <h2 className="title">{movie.title}</h2>
-          <h4 className="date">{movie.release_date.slice(0, 4)}</h4>
+      <div className="header1">
+        <h2 className="title">{movie.title}</h2>
+        <h4 className="date">{movie.release_date.slice(0, 4)}</h4>
+        <div className="ctrlbtns">
           <button
             className={checkWatchlist ? "btn off" : "btn add"}
             disabled={checkWatchlist}
-            onClick={() => addMovieToWatchlist(movie)}
+            onClick={() => addToWatchlist(movie)}
           >
             {" "}
             Add to Watchlist
@@ -46,13 +67,14 @@ export const ResultCard = ({ movie }) => {
           <button
             className={checkWatched ? "btn off" : "btn add"}
             disabled={checkWatched}
-            onClick={() => addMovieToWatched(movie)}
+            onClick={() => addToWatched(movie)}
           >
             {" "}
             Add to Watched
           </button>
         </div>
       </div>
+      <ToastContainer closeButton={false} />
     </div>
   );
 };

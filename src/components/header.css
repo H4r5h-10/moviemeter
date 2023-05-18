@@ -1,47 +1,86 @@
 header{
-    margin: 0;
-    background-color: #1b222c;
-    padding: 2rem;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.inner-content{
     display: flex;
-}
-.brand{
-    font-size: 3rem;
-    font-weight: 700;
-    text-decoration: none;  
-    color: #FF3C38;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    height: 13vh;
+    background-color: var(--color-bg-secondary);
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    align-items: center;
+    border-radius: 1000px;
+    margin: 8px;
+    
 }
 .nav{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    right: -55rem;
-    margin: 0;
-    font-size: 1.4rem;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+}
+nav{
+    z-index: 1;
+}
+nav .links{
+    margin: 0 2rem;
     text-decoration: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.2rem;
+    color: var(--primary-color);
 }
-.link{
-    color: white;
-    text-decoration: none;
+.links:hover{
+    color: var(--secondary-color);
+    transition: 0.4s ease;
 }
-.link:hover{
-    color: red;
-    transition: 0.4s ease-in;
+
+nav .btn{
+    padding: 0.2rem 0.4rem;
 }
-.logo{
-    display: flex;
-    gap: 0.2rem;
-    color: #FF3C38;
+header h3{
+    color: var(--secondary-color);
+    font-size: 2rem;
 }
-.icon{
-    font-size: 3rem;
+header .nav-btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0;
+    font-size: 25px;
+    display: none;
+}
+
+@media only screen and (max-width: 1024px)
+{
+    header{
+        height: 10vh;
+        font-size: 1rem;
+    }
+    header .nav-btn{
+        display: block;
+        opacity: 1;
+        color: var(--primary-color);
+    }
+    header .nav-close-btn{
+        position: absolute;
+        top: calc(50% + 70px);
+        right: auto;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        position: fixed;
+        transition: 1s;
+        transform: translateY(-100vh);
+        height: 100%;
+        width: 100%;    
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        background-color: var(--color-bg-secondary);
+        color: var(--primary-color);
+    }
+    header .responsive-nav{
+        transform: none;
+    }
 }

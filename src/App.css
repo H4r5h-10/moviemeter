@@ -1,26 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap');
-body{
+*{
   margin: 0;
   padding: 0;
-  background-color: #12151c;
   font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  background-color: var(--color-bg-primary);
   color: white;
-
 }
 
 .btn{
-  background-color: #661b1c;
-  padding: 0.7rem 0.9rem;
+  background-color: var(--color-btn);
+  padding: 0.5rem 0.7rem;
   border-radius: 10px;
   color: white;
   text-decoration: none;
 }
+
 .btn:hover{
-  background-color: #531516;
+  background-color: var(--color-btn-sec);
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 ::-webkit-scrollbar{
   display: none;
+}
+/* :root{
+  --primary-color: white;
+  --secondary-color: crimson;
+  --color-bg-primary: #12151c;
+  --color-bg-secondary: #1b222c;
+  --color-btn: #661b1c;
+  --color-btn-sec: #531516;
+} */
+.page-head{
+  margin: 20px 0px;
+  display: flex;
+}
+:root{
+  --primary-color: white;
+  --secondary-color: crimson;
+  --color-bg-primary: #262640;
+  --color-bg-secondary: #1b3a4b;
+  --color-btn: #006466;
+  --color-btn-sec: #144552;
+}
+
+.v-line{
+  border-left: 6px solid crimson;
+  height: 35px;
+  margin-right: 8px;
+}
+@media only screen and (max-width: 678px){
+  body{
+    font-size: 13px;
+  }
+  .v-line{
+    height: 30px;
+  }
+  .btn{
+    padding: 0.2rem 0.5rem;
+  }
 }
 
