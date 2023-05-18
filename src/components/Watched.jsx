@@ -1,13 +1,14 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { GlobalContext } from "../context/GlobalState"
 import {MovieCard} from "./MovieCard"
-
+import LoadingBar from 'react-top-loading-bar';
 
 export const Watched = () => {
   const {watched}=useContext(GlobalContext)
-
+  const [progress, setProgress] = useState(0);
   return (
     <div>
+      <LoadingBar progress={100} onLoaderFinished={() => setProgress(0)}/>
       <div className='top-container'>
         <h1 className="page-head"><div className="v-line"></div>Watched Movies</h1>
         <div className="card-container">

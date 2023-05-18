@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { ResultCard } from "./ResultCard";
-
+import LoadingBar from 'react-top-loading-bar';
 import "./add.css";
 
 export const Add = () => {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
+  const [progress, setProgress] = useState(0);
 
   const onchange = (e) => {
     e.preventDefault();
@@ -25,6 +26,7 @@ export const Add = () => {
 
   return (
     <div className="add-page">
+      <LoadingBar progress={100} onLoaderFinished={() => setProgress(0)}/>
         <div className="add-content">
           <div className="input-wrapper">
             <input

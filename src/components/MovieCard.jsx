@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./moviecard.css";
 import { MovieControls } from "./MovieControls";
 
