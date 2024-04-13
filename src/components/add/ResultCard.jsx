@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./resultcard.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "../../context/GlobalState";
 
 export const ResultCard = ({ movie }) => {
   const { addMovieToWatchlist, watchlist, watched, addMovieToWatched } =
@@ -39,7 +39,7 @@ export const ResultCard = ({ movie }) => {
         {movie.poster_path ? (
           <img
             src={`http://image.tmdb.org/t/p/w200${movie.poster_path}`}
-            alt={`${movie.title} Poster`}
+            alt={`${movie.title?movie.title:movie.name} Poster`}
             width="200"
             height="300"
           />
@@ -53,8 +53,8 @@ export const ResultCard = ({ movie }) => {
         )}
       </div>
       <div className="header1">
-        <h2 className="title">{movie.title}</h2>
-        <h4 className="date">{movie.release_date.slice(0, 4)}</h4>
+        <h2 className="title">{movie.title?movie.title:movie.name}</h2>
+        <h4 className="date">{movie.release_date?movie.release_date.slice(0,4):movie.first_air_date?movie.first_air_date.slice(0,4):""}</h4>
         <div className="ctrlbtns">
           <button
             className={checkWatchlist ? "btn off" : "btn add"}

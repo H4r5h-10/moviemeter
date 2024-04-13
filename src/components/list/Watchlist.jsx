@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import "./watchlist.css";
-import { MovieCard } from "./MovieCard";
+import { MovieCard } from "../moviecard/MovieCard";
 import { RiSearchEyeLine } from "react-icons/ri";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "../../context/GlobalState";
 import LoadingBar from 'react-top-loading-bar';
 
 export const Watchlist = () => {

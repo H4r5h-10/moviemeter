@@ -12,15 +12,17 @@ export const Add = () => {
     e.preventDefault();
     setQuery(e.target.value);
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&page=1&include_adult=false&query=${e.target.value}`
-    )
+      // "https://api.themoviedb.org/3/search/multi?api_key=12737eb0218b6cca5b2303c9865cbcdb&include_adult=false&query=boys")
+      `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_TMDB_KEY}&include_adult=false&query=${e.target.value}`    )
+      // `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_TMDB_KEY}&include_adult=false&query=${e.target.value}`    )
       .then((res) => res.json())
       .then((data) => {
         if (!data.error) {
           setMovies(data.results);
+          console.log(movies);
         } else {
           setMovies([]);
-        }
+        } 
       });
   };
 
@@ -37,7 +39,7 @@ export const Add = () => {
           </div>
           {movies.length > 0 && (
             <ul className="results">
-              {movies.map((movie) => (
+              {movies.filter((movie) => movie.media_type !== "person").map((movie) => (
                 <li key={movie.id}>
                   <ResultCard movie={movie} />
                 </li>

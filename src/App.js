@@ -1,10 +1,10 @@
 import './App.css';
 import { HashRouter as Router,  Routes, Route} from 'react-router-dom';
-import {Header} from './components/Header'
-import {Watched} from './components/Watched'
-import {Watchlist} from './components/Watchlist'
-import {Add} from './components/Add'
-import { GlobalProvider } from './context/GlobalState';
+import {Header} from '../src/components/header/Header'
+import {Watched} from '../src/components/list/Watched'
+import {Watchlist} from '../src/components/list/Watchlist'
+import {Add} from '../src/components/add/Add'
+import { GlobalProvider } from '../src/context/GlobalState';
 
 
 function App() {

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
-import { GlobalContext } from "../context/GlobalState"
-import {MovieCard} from "./MovieCard"
+import { GlobalContext } from "../../context/GlobalState"
+import {MovieCard} from "../moviecard/MovieCard"
 import LoadingBar from 'react-top-loading-bar';
 
 export const Watched = () => {

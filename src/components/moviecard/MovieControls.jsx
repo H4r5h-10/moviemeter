@@ -3,7 +3,7 @@ import {BsEyeFill} from 'react-icons/bs'
 import {RxCross1} from 'react-icons/rx'
 import {AiFillEyeInvisible} from 'react-icons/ai'
 import './moviecontrol.css'
-import { GlobalContext } from '../context/GlobalState'
+import { GlobalContext } from '../../context/GlobalState'
 
 
 export const MovieControls = ({movie, type}) => {
